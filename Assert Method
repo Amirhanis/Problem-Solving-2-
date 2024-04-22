@@ -1,0 +1,40 @@
+public class HostelManager {
+
+    // Function to book a hostel
+    public boolean bookHostel(String studentName, int roomNumber) {
+        // Assume booking logic here
+        // For demonstration, let's just return true
+        return true;
+    }
+
+    // Function to calculate hostel fees
+    public double calculateHostelFees(int roomNumber, int durationInMonths) {
+        // Assume fee calculation logic here
+        // For demonstration, let's just return a fixed fee
+        return 500 * durationInMonths;
+    }
+
+    // Function to register a complaint for hostel support
+    public void registerComplaint(String studentName, String complaint) {
+        // Assume complaint registration logic here
+        // For demonstration, let's just print the complaint
+        System.out.println("Complaint registered by " + studentName + ": " + complaint);
+    }
+
+    public static void main(String[] args) {
+        HostelManager hostelManager = new HostelManager();
+
+        // Testing booking hostel function
+        assert hostelManager.bookHostel("John Doe", 101) == true :
+                "Booking hostel failed";
+
+        // Testing hostel fees calculation function
+        assert hostelManager.calculateHostelFees(101, 6) == 3000.0 :
+                "Hostel fees calculation failed";
+
+        // Testing complaint support function
+        // Since this function doesn't return anything, we just check that it executes without errors
+        hostelManager.registerComplaint("Jane Doe", "The light in my room is not working properly");
+        System.out.println("Complaint registration successful");
+    }
+}
